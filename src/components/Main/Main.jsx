@@ -2,6 +2,7 @@ import React from 'react'
 import Scrollspy from 'react-scrollspy'
 import './Main.css'
 import Proyectos from '../Proyectos/Proyectos'
+import Proyectos2 from '../Proyectos/Proyectos2'
 import Navbar from '../Navbar/Navbar'
 import Contacto from '../Contacto/Contacto'
 import Perfil from '../Perfil/Perfil'
@@ -21,7 +22,13 @@ const Main = () => {
 
                 <div id="section2" className='div-item'>
                     <h4 className="section-header">Proyectos</h4>
+                    <p className='text-center mb-0'>(1/2)</p>
                     <Proyectos />
+                </div>
+                <div id="section2-b" className='div-item'>
+                    <h4 className="section-header">Proyectos</h4>
+                    <p className='text-center mb-0'>(2/2)</p>
+                    <Proyectos2 />
                 </div>
 
                 <div id="section3" className='div-item'>
@@ -101,7 +108,7 @@ const Main = () => {
                         <div className="div-certificado">
                             <img src="https://i.ibb.co/ncXqHMM/certificado-js-coderhose.png" alt="certificado-coder" className="cursor-pointer img-certificado" data-bs-toggle="modal" data-bs-target="#js" style={{ cursor: 'pointer' }} />
                             <div className="modal fade modal-image" id="js" tabIndex="-1" aria-hidden="true">
-                                <div className="modal-dialog" style={{ maxWidth: '50%' }}>
+                                <div className="modal-dialog">
                                     <div className="modal-content">
                                         <div className="modal-body">
                                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -114,7 +121,7 @@ const Main = () => {
                         <div className="div-certificado">
                             <img src="https://i.ibb.co/QPgfptZ/certificado-react-js-coderhose.png" alt="certificado-coder" className="cursor-pointer img-certificado" data-bs-toggle="modal" data-bs-target="#react" style={{ cursor: 'pointer' }} />
                             <div className="modal fade modal-image" id="react" tabIndex="-1" aria-hidden="true">
-                                <div className="modal-dialog" style={{ maxWidth: '50%' }}>
+                                <div className="modal-dialog">
                                     <div className="modal-content">
                                         <div className="modal-body">
                                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -127,7 +134,7 @@ const Main = () => {
                         <div className="div-certificado">
                             <img src="https://i.ibb.co/BzL0Df9/certificado-programacion-backend.png" alt="certificado-coder" className="cursor-pointer img-certificado" data-bs-toggle="modal" data-bs-target="#backend" style={{ cursor: 'pointer' }} />
                             <div className="modal fade modal-image" id="backend" tabIndex="-1" aria-hidden="true">
-                                <div className="modal-dialog" style={{ maxWidth: '50%' }}>
+                                <div className="modal-dialog">
                                     <div className="modal-content">
                                         <div className="modal-body">
                                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
