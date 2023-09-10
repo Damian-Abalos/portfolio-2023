@@ -1,0 +1,373 @@
+#contenido {
+  height: 100vh;
+  width: 100%;
+  color: aliceblue;
+  margin: auto;
+  padding-bottom: 50px;
+}
+
+#navbarNavAltMarkup {
+  position: absolute;
+  top: 40;
+  right: 20px;
+  background-color: white;
+  /* Opcional: Define el fondo del menú */
+  z-index: 9999;
+  /* Ajusta el valor de z-index según sea necesario para asegurar que esté por encima del contenido */
+}
+
+#section1 {
+  width: 80%;
+  text-align: justify;
+}
+
+#section5 {
+  height: 100%;
+}
+
+/* Estilo para el botón de navegación */
+.navbar-toggler {
+  position: relative;
+  /* Asegura que el botón sea el contexto de posicionamiento para el menú */
+  z-index: 10000;
+  /* Ajusta el valor de z-index para que esté por encima del contenido */
+}
+
+.list-group-item-action {
+  width: 50% !important;
+}
+
+
+.lista {
+  padding: 5px;
+}
+
+.div-item {
+  padding: 50px 2rem 2rem 2rem;
+  margin: auto;
+  min-height: 100vh;
+  scroll-snap-align: center;
+}
+
+.herramientas {
+  /* margin-bottom: 1rem; */
+  text-align: center;
+}
+
+.herramientas a {
+  text-decoration: none;
+}
+
+.backend,
+.frontend,
+.mobile {
+  padding: 10px;
+  border-radius: 5px;
+  /* max-width: 40vh; */
+  /* height: 40vh; */
+}
+
+.otros {
+  padding: 10px;
+  border-radius: 5px;
+  /* height: 30vh; */
+
+}
+
+.herramientas-subdiv {
+  margin: auto;
+  background-color: #232323;
+  border-radius: 6px;
+  width: 80%;
+  height: max-content;
+  padding: 10px;
+  border: 2px solid rgb(255, 255, 255);
+
+}
+
+.herramientas-subdiv p a img {
+  width: 60px;
+  height: 60px;
+  margin-top: 7px;
+  margin-right: 5px;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 20%;
+}
+
+.herramientas-subdiv p a img:hover {
+  background-color: #969696;
+}
+
+.scroll {
+  max-height: 100%;
+  height: calc(100vh - 85px);
+  overflow: auto;
+  padding: 5px;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+/* Estilos para la barra de desplazamiento en Google Chrome */
+.scroll::-webkit-scrollbar {
+  width: 12px;
+  /* Ancho de la barra de desplazamiento vertical */
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background-color: #888;
+  /* Color del "pulgar" de la barra de desplazamiento (la parte arrastrable) */
+  border-radius: 6px;
+  /* Borde redondeado del "pulgar" */
+}
+
+.scroll::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+  /* Cambia el color del "pulgar" al pasar el ratón sobre él */
+}
+
+.scroll::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  /* Color de fondo de la pista de la barra de desplazamiento */
+  border-radius: 6px;
+  /* Borde redondeado de la pista */
+}
+
+.scroll::-webkit-scrollbar-track:hover {
+  background-color: #d4d4d4;
+  /* Cambia el color de fondo de la pista al pasar el ratón sobre él */
+}
+
+/* certificados */
+.div-certificados {
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 80%;
+  margin: auto;
+}
+
+.div-certificado {
+  height: 40vh;
+  width: 50%;
+  padding: 0.25rem;
+  display: flex;
+}
+
+.img-certificado {
+  margin: 0 auto;
+  height: 80%;
+  aspect-ratio: 4/3;
+}
+
+.modal-body button {
+  margin: 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.modal-content {
+  top: 15vh;
+}
+
+.modal-dialog{
+  max-width: 50%;
+}
+/* Estilos para la barra de desplazamiento en Google Chrome */
+.div-certificados::-webkit-scrollbar {
+  width: 12px;
+  /* Ancho de la barra de desplazamiento vertical */
+}
+
+.div-certificados::-webkit-scrollbar-thumb {
+  background-color: #888;
+  /* Color del "pulgar" de la barra de desplazamiento (la parte arrastrable) */
+  border-radius: 6px;
+  /* Borde redondeado del "pulgar" */
+}
+
+.div-certificados::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+  /* Cambia el color del "pulgar" al pasar el ratón sobre él */
+}
+
+.div-certificados::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  /* Color de fondo de la pista de la barra de desplazamiento */
+  border-radius: 6px;
+  /* Borde redondeado de la pista */
+}
+
+.div-certificados::-webkit-scrollbar-track:hover {
+  background-color: #d4d4d4;
+  /* Cambia el color de fondo de la pista al pasar el ratón sobre él */
+}
+
+
+/* Begin Media Queries*/
+@media screen and (max-width: 1092px) {
+  .div-certificados {
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 50vh;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .div-certificado {
+    width: 100%;
+    scroll-snap-align: center;
+    aspect-ratio: 4/1;
+    max-width: 100%;
+  }
+
+  .img-certificado {
+    height: 100%;
+    aspect-ratio: 4/3;
+  }
+
+  .modal-dialog{
+    max-width: 75%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+
+  .list-group-item-action {
+    width: 100% !important;
+  }
+
+  #contenido {
+    height: 100vh;
+    width: 100%;
+    color: aliceblue;
+    margin: auto;
+    padding-bottom: 50px;
+  }
+
+  #navbarNavAltMarkup {
+    position: absolute;
+    top: 7px;
+    right: 20px;
+    background-color: white;
+    /* Opcional: Define el fondo del menú */
+    z-index: 9999;
+    /* Ajusta el valor de z-index según sea necesario para asegurar que esté por encima del contenido */
+  }
+}
+
+@media screen and (max-width: 770px) {
+
+  .herramientas {
+    height: 30%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+
+  .herramientas-subdiv p a img{
+    width: 45px;
+    height: 45px;
+  }
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .direct-contact-container,
+  .form-horizontal {
+    margin: 0 auto;
+  }
+
+  .direct-contact-container {
+    margin-top: 20px;
+    max-width: 300px;
+  }
+
+  .social-media-list li {
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+  }
+
+  .social-media-list li:after {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  
+  .div-certificado {
+    height: 27vh;
+  }
+  
+}
+@media screen and (max-width: 576px) {
+
+  .modal-dialog{
+    margin: auto;
+  }
+
+  .direct-contact-container,
+  .form-wrapper {
+    float: none;
+    margin: 0 auto;
+  }
+
+  .form-control,
+  textarea {
+
+    margin: 0 auto;
+  }
+
+  .name,
+  .email,
+  textarea {
+    width: 280px;
+  }
+
+  .direct-contact-container {
+    margin-top: 20px;
+    max-width: 400px;
+  }
+
+  .social-media-list {
+    left: 0;
+  }
+
+  .social-media-list li {
+    height: 55px;
+    width: 55px;
+    line-height: 55px;
+    font-size: 2rem;
+  }
+
+  .social-media-list li:after {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+  }
+
+}
+
+@media screen and (max-width: 540px) {
+  .herramientas-subdiv p a img {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+  }
+
+}
+
+@media screen and (max-width: 440px) {
+
+  .direct-contact-container {
+    margin-top: 20px;
+    max-width: 300px;
+  }
+
+}
