@@ -46,9 +46,9 @@ h3{
 }
 
 .div-item {
-  padding: 50px 2rem 2rem 2rem;
+  padding: 2rem 1rem 1rem 1rem;
   margin: auto;
-  min-height: 100vh;
+  height: 100%;
   scroll-snap-align: center;
 }
 
@@ -81,13 +81,15 @@ h3{
   margin: auto;
   background-color: #232323;
   border-radius: 6px;
-  width: 80%;
+  width: 90%;
   height: max-content;
   padding: 10px;
   border: 2px solid rgb(255, 255, 255);
 
 }
-
+.herramientas-subdiv p{
+  padding-bottom: 0.4rem;
+}
 .herramientas-subdiv p a img {
   width: 60px;
   height: 60px;
@@ -103,12 +105,16 @@ h3{
 }
 
 .scroll {
+  background: url('/public/images/bg-code.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   max-height: 100%;
-  height: calc(100vh - 90px);
+  height: 100vh;
   overflow: auto;
   padding: 5px;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
+  scroll-snap-align: center;
 }
 
 /* Estilos para la barra de desplazamiento en Google Chrome */
@@ -154,12 +160,16 @@ h3{
   width: 50%;
   padding: 0.25rem;
   display: flex;
+  align-items: center;
 }
 
 .img-certificado {
   margin: 0 auto;
   height: 80%;
   aspect-ratio: 4/3;
+}
+.img-certificado:hover {
+  box-shadow: 0px 0px 10px 2px rgb(255, 255, 255, 60%);
 }
 
 .modal-body button {
@@ -359,8 +369,8 @@ h3{
 
 @media screen and (max-width: 540px) {
   .herramientas-subdiv p a img {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     padding: 5px;
   }
 

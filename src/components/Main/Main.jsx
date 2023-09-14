@@ -1,5 +1,4 @@
-import React from 'react'
-import Scrollspy from 'react-scrollspy'
+import React, { useRef, useEffect, useState } from 'react'
 import './Main.css'
 import Proyectos from '../Proyectos/Proyectos'
 import Proyectos2 from '../Proyectos/Proyectos2'
@@ -9,12 +8,52 @@ import Perfil from '../Perfil/Perfil'
 
 const Main = () => {
 
+    const scrollContainerRef = useRef(null);
+    const [scrollPosition, setScrollPosition] = useState(0);
+    const [activeClass, setActiveClass] = useState('');
 
+    useEffect(() => {
+        const scrollContainer = scrollContainerRef.current;
+
+        const handleScroll = () => {
+            // Espera un momento (por ejemplo, 100ms) para asegurarte de que el efecto de "scroll snapping" se complete
+            setTimeout(() => {
+                const scrollTop = scrollContainer.scrollTop;
+                setScrollPosition(scrollTop);
+                
+                // Determina la clase activa en función de la posición del scroll
+                if (scrollTop >= 0 && scrollTop <= 50 ) {
+                    setActiveClass('active-div1');
+                } else if (scrollTop >= 857 && scrollTop <= 1945) {
+                    setActiveClass('active-div2');
+                } else if (scrollTop >= 2500 && scrollTop <= 2898) {
+                    setActiveClass('active-div3');
+                } else if (scrollTop >= 3400 && scrollTop <= 3839) {
+                    setActiveClass('active-div4');
+                } else if (scrollTop >= 4200 && scrollTop <= 4780) {
+                    setActiveClass('active-div5');
+                } else {
+                    setActiveClass('');
+                }
+
+            }, 100);
+        };
+
+        scrollContainer.addEventListener('scroll', handleScroll);
+
+        return () => {
+            scrollContainer.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    console.log(scrollPosition);
     return (
         <div className='contenido row' id='contenido'>
-            <Navbar />
+            <Navbar
+                active={activeClass}
+            />
 
-            <div className="scroll">
+            <div ref={scrollContainerRef} className="scroll">
 
                 <div id="section1" className='div-item'>
                     <Perfil />
@@ -22,19 +61,18 @@ const Main = () => {
 
                 <div id="section2" className='div-item'>
                     <h4 className="section-header">Proyectos</h4>
-                    <p className='text-center mb-0'>(1/2)</p>
+                    <p className='text-center mb-0' style={{height:'3%'}}>(1/2)</p>
                     <Proyectos />
                 </div>
                 <div id="section2-b" className='div-item'>
                     <h4 className="section-header">Proyectos</h4>
-                    <p className='text-center mb-0'>(2/2)</p>
+                    <p className='text-center mb-0' style={{height:'3%'}}>(2/2)</p>
                     <Proyectos2 />
                 </div>
 
                 <div id="section3" className='div-item'>
-                    <h4 className="section-header">Lenguajes y herramientas</h4>
-                    <div className='row m-auto justify-content-evenly'>
-                        {/* <div class="grid grid-row-2 py-4 gap-4"><div class="grid grid-cols-7 gap-1 aos-init aos-animate" data-aos="fade-top" data-aos-duration="1600" data-aos-delay="400"><div class="rounded-full bg-light w-11 h-11 md:w-14 md:h-14 flex items-center place-content-center" data-v-e8019bd0=""><img src="icons/vue.png" alt="" class="flex w-max p-1 md:p-0 max-h-8 md:max-h-10 pt-1" data-v-e8019bd0=""/></div><div class="rounded-full bg-light w-11 h-11 md:w-14 md:h-14 flex items-center place-content-center" data-v-e8019bd0=""><img src="icons/js.png" alt="" class="flex w-max p-1 md:p-0 max-h-8 md:max-h-10 pt-1" data-v-e8019bd0=""/></div><div class="rounded-full bg-light w-11 h-11 md:w-14 md:h-14 flex items-center place-content-center" data-v-e8019bd0=""><img src="icons/laravel.png" alt="" class="flex w-max p-1 md:p-0 max-h-8 md:max-h-10 pt-1" data-v-e8019bd0=""/></div><div class="rounded-full bg-light w-11 h-11 md:w-14 md:h-14 flex items-center place-content-center" data-v-e8019bd0=""><img src="icons/node.png" alt="" class="flex w-max p-1 md:p-0 max-h-8 md:max-h-10 pt-1" data-v-e8019bd0=""/></div><div class="rounded-full bg-light w-11 h-11 md:w-14 md:h-14 flex items-center place-content-center" data-v-e8019bd0=""><img src="icons/python.png" alt="" class="flex w-max p-1 md:p-0 max-h-8 md:max-h-10 pt-1" data-v-e8019bd0=""/></div><div class="rounded-full bg-light w-11 h-11 md:w-14 md:h-14 flex items-center place-content-center" data-v-e8019bd0=""><img src="icons/mongoDb.png" alt="" class="flex w-max p-1 md:p-0 max-h-8 md:max-h-10 pt-1" data-v-e8019bd0=""/></div><div class="rounded-full bg-light w-11 h-11 md:w-14 md:h-14 flex items-center place-content-center" data-v-e8019bd0=""><img src="icons/xd.png" alt="" class="flex w-max p-1 md:p-0 max-h-8 md:max-h-10 pt-1" data-v-e8019bd0=""/></div></div><div class="grid grid-cols-7 gap-1 aos-init aos-animate" data-aos="fade-top" data-aos-duration="1600" data-aos-delay="700"><div class="rounded-full bg-light w-11 h-11 md:w-14 md:h-14 flex items-center place-content-center" data-v-e8019bd0=""><img src="icons/tailwind.png" alt="" class="flex w-max p-1 md:p-0 max-h-8 md:max-h-10 pt-1" data-v-e8019bd0=""/></div><div class="rounded-full bg-light w-11 h-11 md:w-14 md:h-14 flex items-center place-content-center" data-v-e8019bd0=""><img src="icons/css.png" alt="" class="flex w-max p-1 md:p-0 max-h-8 md:max-h-10 pt-1" data-v-e8019bd0=""/></div><div class="rounded-full bg-light w-11 h-11 md:w-14 md:h-14 flex items-center place-content-center" data-v-e8019bd0=""><img src="icons/postman.png" alt="" class="flex w-max p-1 md:p-0 max-h-8 md:max-h-10 pt-1" data-v-e8019bd0=""/></div><div class="rounded-full bg-light w-11 h-11 md:w-14 md:h-14 flex items-center place-content-center" data-v-e8019bd0=""><img src="icons/html.png" alt="" class="flex w-max p-1 md:p-0 max-h-8 md:max-h-10 pt-1" data-v-e8019bd0=""/></div><div class="rounded-full bg-light w-11 h-11 md:w-14 md:h-14 flex items-center place-content-center" data-v-e8019bd0=""><img src="icons/php.png" alt="" class="flex w-max p-1 md:p-0 max-h-8 md:max-h-10 pt-1" data-v-e8019bd0=""/></div><div class="rounded-full bg-light w-11 h-11 md:w-14 md:h-14 flex items-center place-content-center" data-v-e8019bd0=""><img src="icons/figma.png" alt="" class="flex w-max p-1 md:p-0 max-h-8 md:max-h-10 pt-1" data-v-e8019bd0=""/></div><div class="rounded-full bg-light w-11 h-11 md:w-14 md:h-14 flex items-center place-content-center" data-v-e8019bd0=""><img src="icons/vsc.png" alt="" class="flex w-max p-1 md:p-0 max-h-8 md:max-h-10 pt-1" data-v-e8019bd0=""/></div></div></div> */}
+                    <h4 className="section-header" style={{height:'15%'}}>Lenguajes y herramientas</h4>
+                    <div className='row m-auto justify-content-evenly' style={{height:'85%'}}>
                         <div className='col-12 herramientas frontend'>
                             <h5 className='text-center'>Front-end</h5>
                             <div className='herramientas-subdiv'>

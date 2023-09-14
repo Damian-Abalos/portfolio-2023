@@ -5,6 +5,7 @@
 }
 
 .section-header {
+    height: 7%;
     text-align: center;
     margin: 0 auto;
     padding: 15px 0;
@@ -187,7 +188,10 @@ hr {
     }
 }
 
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 500px) {
+    .contact-text {
+        font-size: 15px;
+    }
 
     .section-header{
         font: 300 26px 'Oswald', sans-serif !important;

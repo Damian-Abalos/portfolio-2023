@@ -18,7 +18,7 @@ const Proyectos2 = () => {
                 <Proyect
                     titulo={"E-commerce Casa Vegana"}
                     urlImage={"https://www.santecocinaconsciente.com.ar/wp-content/uploads/2022/09/65881147_2600398869978497_2547244601022873600_n.jpg"}
-                    descripcion={"E-commerce con carrito de compras y stock real de productos cargados en firebase. Entrega final de curso React-Js - Coderhouse."}
+                    descripcion={"E-commerce con carrito y stock en Firebase. Proyecto final de curso en React.js (Coderhouse)."}
                     etiquetas={"#React-js #Firebase #Bootstrap #responsive"}
                     urlSite={"https://casa-vegana.netlify.app/"}
                     urlGithub={"https://github.com/Damian-Abalos/myapp"}
@@ -40,7 +40,7 @@ const Proyectos2 = () => {
                     urlSite={"https://damian-abalos.github.io/interior-consultant/"}
                     urlGithub={"https://github.com/Damian-Abalos/interior-consultant"}
                 />
-                <br />
+                
             </div>
         </div>
     )

@@ -6,14 +6,14 @@ const Saludo = () => {
         <div id="saludo">
             <div className="contenedor m-auto container">
                 <div
-                    data-aos="fade-up"
-                    data-aos-offset="200"
-                    data-aos-delay="20"
-                    data-aos-duration="1000"
-                    data-aos-easing="ease-in-out"
-                    data-aos-mirror="true"
-                    data-aos-once="false"
-                    data-aos-anchor-placement="top-center"
+                    // data-aos="fade-up"
+                    // data-aos-offset="200"
+                    // data-aos-delay="20"
+                    // data-aos-duration="1000"
+                    // data-aos-easing="ease-in-out"
+                    // data-aos-mirror="true"
+                    // data-aos-once="false"
+                    // data-aos-anchor-placement="top-center"
                 >
                     <div className="mi-img align-items-center m-auto">
                         <img

@@ -1,3 +1,8 @@
+.mi-navbar{
+    position: sticky;
+    top: 0px; 
+}
+
 .img-nav{
     width: 75px;
     border-radius: 50%;
@@ -13,6 +18,7 @@
 }
 .nav-link{
     transition: background-color 0.3s ease-in;
+    padding: 0.5rem;
 }
 .nav-link:hover{
     background-color: rgba(78, 77, 77, 0.842);

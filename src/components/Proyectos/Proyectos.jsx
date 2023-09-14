@@ -9,8 +9,8 @@ const Proyectos = () => {
                 <Proyect
                     titulo={"Gruppo 2 Seguros"}
                     urlImage={"https://assesorum.com/static/media/compania-seguros.069e166c.jpg"}
-                    descripcion={"Gruppo2seguros - Sitio web para compañía de seguros. Inculye formulario de consultas, envio de imagenes por mail y redirecciones a chat de WhatsApp."}
-                    etiquetas={"#HTML #CSS #JavaScript #PHP #Responsive"}
+                    descripcion={"Sitio web para compañía de seguros con formulario de consultas, envío de imágenes por correo y enlaces directos a chat de WhatsApp."}
+                    etiquetas={"#HTML #CSS #JavaScript #PHP"}
                     urlSite={"https://gruppo2seguros.com/"}
                     urlGithub={"https://github.com/Damian-Abalos/Gruppo2seguros"}
                 />
@@ -18,16 +18,16 @@ const Proyectos = () => {
                     titulo={"Dicofra Identidades"}
                     urlImage={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX_bLuzQAKwoWuy0olyMAE4vATvjZBuyEANbkGdqY5gtYC1Ta2Po9W1AVHmM6GW8yuIY0&usqp=CAU"}
                     descripcion={"Trabajo freelance para la empresa de ciberseguridad Dicofra. Incluye formulario de consultas."}
-                    etiquetas={"#HTML #CSS #SASS #Responsive #PHP"}
+                    etiquetas={"#HTML #CSS #SASS #PHP"}
                     urlSite={"https://dicofra.com/identidades/"}
                     urlGithub={"https://github.com/Damian-Abalos/dicofra-identitades"}
                 />
                 <Proyect
                     titulo={"Netflix clon"}
                     urlImage={"https://elrincondenetflix.com/wp-content/uploads/2020/04/nuevo-logo-netflix_original.jpg"}
-                    descripcion={"Netflix clon - App hecha con react-js. Inicio de sesión y lista de favoritos con firebase. Consumiendo la api TMDB para importar las peliculas y el framework Tailwind para los estilos."}
-                    etiquetas={"#React-JS #Firebase #Tailwind #Responsive"}
-                    urlSite={"https://netflix-clone-7541a.web.app/"}
+                    descripcion={"Clon de Netflix en React.js con inicio de sesión, lista de favoritos en Firebase y diseño con Tailwind. Utiliza la API de TMDB para cargar películas."}
+                    etiquetas={"#React-JS #Firebase #Tailwind"}
+                    urlSite={"https://netfix-clone-abalos.netlify.app/"}
                     urlGithub={"https://github.com/Damian-Abalos/netfilx-clone"}
                 />
                 <Proyect
@@ -35,7 +35,7 @@ const Proyectos = () => {
                     urlImage={"https://img.freepik.com/vector-gratis/widget-clima-realista_1284-4092.jpg?w=2000"}
                     descripcion={"App clima, consulta el clima segun la ciudad. Consumiendo la api de OpenWeather."}
                     etiquetas={"#React-js #Ajax #Firebase #Bootstrap"}
-                    urlSite={"https://mi-app-clima.netlify.app/"}
+                    urlSite={"https://app-clima-abalos.netlify.app/"}
                     urlGithub={"https://github.com/Damian-Abalos/app-clima"}
                 />
             </div>

@@ -1,21 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Navbar.css'
-const Navbar = () => {
-    const [activeNavItem, setActiveNavItem] = useState(null);
+const Navbar = (active) => {
 
-    const handleNavItemClick = (index) => {
-        setActiveNavItem(index);
-    };
+    const activeClass = active
 
-    const navItems = [
-        'Sobre mi',
-        'Proyectos',
-        'Lenguajes y herramientas',
-        'Certificados',
-        'Contacto',
-    ];
     return (
-        <div className='m-0 p-0' style={{ position: 'sticky', top: 0 }}>
+        <div className='m-0 p-0 mi-navbar'>
             <nav className="w-100 p-0 navbar navbar-expand-lg navbar-light bg-light">
                 <div className="nav-container container-fluid bg-dark">
                     <a style={{ width: '100px' }} className="navbar-brand d-flex align-items-center" href="#saludo">
@@ -32,17 +22,41 @@ const Navbar = () => {
                     </button>
                     <div className="collapse navbar-collapse justify-content-end bg-dark" id="navbarNavAltMarkup">
                         <div className="navbar-nav p-3">
-                            {navItems.map((item, index) => (
-                                <a
-                                    id={`high${index + 1}`}
-                                    key={index}
-                                    className={`nav-link text-light text-decoration-none ${activeNavItem === index ? 'active' : ''}`}
-                                    href={`#section${index + 1}`}
-                                    onClick={() => handleNavItemClick(index)}
-                                >
-                                    {item}
-                                </a>
-                            ))}
+                            <a
+                                id='high1'
+                                className={`${activeClass.active === 'active-div1' ? 'active' : ''} nav-link text-light text-decoration-none`}
+                                href={`#section1`}
+                            >
+                                Sobre mi
+                            </a>
+                            <a
+                                id='high2'
+                                className={`${activeClass.active === 'active-div2' ? 'active' : ''} nav-link text-light text-decoration-none`}
+                                href={`#section2`}
+                            >
+                                Proyectos
+                            </a>
+                            <a
+                                id='high3'
+                                className={`${activeClass.active === 'active-div3' ? 'active' : ''} nav-link text-light text-decoration-none`}
+                                href={`#section3`}
+                            >
+                                Lenguajes y herramientas
+                            </a>
+                            <a
+                                id='high4'
+                                className={`${activeClass.active === 'active-div4' ? 'active' : ''} nav-link text-light text-decoration-none`}
+                                href={`#section4`}
+                            >
+                                Certificados
+                            </a>
+                            <a
+                                id='high5'
+                                className={`${activeClass.active === 'active-div5' ? 'active' : ''} nav-link text-light text-decoration-none`}
+                                href={`#section5`}
+                            >
+                                Contacto
+                            </a>
                         </div>
                     </div>
                 </div>
