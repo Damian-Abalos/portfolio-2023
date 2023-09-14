@@ -46,7 +46,7 @@ const Main = () => {
         };
     }, []);
 
-    console.log(scrollPosition);
+    // console.log(scrollPosition);
     return (
         <div className='contenido row' id='contenido'>
             <Navbar
